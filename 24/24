@@ -1,0 +1,24 @@
+Challenge:
+
+A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.
+
+Solution:
+
+
+* <write brute.py>
+* python brute.py
+* <exit every so often and check result>
+	* ctrl+z
+	* sort -u result
+	* <check that its still running>
+		* wc -l result
+* fg
+
+Flag:
+
+uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+Notes:
+I originally wrote a python script to brute force using sockets but I had some issues with it.
+I then wrote a bash script but it kept shitting itself, some error to do with forking (even when I removed the &)
+Eventually I settled on an ugly hack using python to run bash commands.
