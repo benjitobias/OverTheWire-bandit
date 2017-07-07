@@ -1,3 +1,5 @@
 Connect to server using:
 
 ssh bandit20@bandit.labs.overthewire.org -p 2220
+
+There are only 26 levels

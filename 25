@@ -1,0 +1,24 @@
+Challenge:
+
+Logging in to bandit26 from bandit25 should be fairly easy… The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.
+
+Solution:
+* ls <ssh key exists>
+* cat /etc/passwd | grep bandit26
+* <logon shell is /usr/bin/showtext>
+* cat /usr/bin/showtext
+	* <basically prints something to screen by running 'more' on a file>
+* ssh -i bandit26.sshkey bandit26@127.0.0.1
+* <connects and exits after printing>
+* <make screen as small as possible>
+* <ssh again>
+* <more stays in more process>
+* v <enter visual editor>
+* <esc>
+* :e /etc/bandit_pass/bandit26
+
+Flag:
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+Notes:
+I had to look up how to do this one
