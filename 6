@@ -1,0 +1,17 @@
+Challenge:
+
+The password for the next level is stored somewhere on the server and has all of the following properties:
+
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
+
+Solution:
+
+* find / -type f -size 33c -group bandit6 -user bandit7 2>/dev/null
+	2>/dev/null ouputs all errors to /dev/null because permission denied spams everything
+* cat /var/lib/dpkg/info/bandit7.password
+
+Flag:
+
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
